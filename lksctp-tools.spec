@@ -1,5 +1,5 @@
 Summary:	User-space access to Linux kernel SCTP
-Summary(pl):	Dostêp do linuksowego SCTP z przestrzeni u¿ytkownika
+Summary(pl.UTF-8):   DostÄ™p do linuksowego SCTP z przestrzeni uÅ¼ytkownika
 Name:		lksctp-tools
 Version:	1.0.6
 Release:	1
@@ -18,25 +18,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package is for Linux Kernel SCTP Reference Implementation. It
 includes command-line utilities.
 
-%description -l pl
+%description -l pl.UTF-8
 Ten pakiet jest przeznaczony dla linuksowej implementacji SCTP.
-Zawiera narzêdzia dzia³aj±ce z linii poleceñ.
+Zawiera narzÄ™dzia dziaÅ‚ajÄ…ce z linii poleceÅ„.
 
 %package -n libsctp
 Summary:	User-space library to access Linux kernel SCTP implementation
-Summary(pl):	Biblioteka pozwalaj±ca na dostêp do linuksowej implementacji SCTP
+Summary(pl.UTF-8):   Biblioteka pozwalajÄ…ca na dostÄ™p do linuksowej implementacji SCTP
 License:	LGPL v2.1+
 Group:		Libraries
 
 %description -n libsctp
 User-space library to access Linux kernel SCTP implementation.
 
-%description -n libsctp -l pl
-Biblioteka pozwalaj±ca na dostêp do linuksowej implementacji SCTP.
+%description -n libsctp -l pl.UTF-8
+Biblioteka pozwalajÄ…ca na dostÄ™p do linuksowej implementacji SCTP.
 
 %package -n libsctp-devel
 Summary:	Header files for libsctp library
-Summary(pl):	Pliki nag³ówkowe biblioteki libsctp
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libsctp
 Group:		Development/Libraries
 License:	LGPL v2.1+
 Requires:	libsctp = %{version}-%{release}
@@ -44,12 +44,12 @@ Requires:	libsctp = %{version}-%{release}
 %description -n libsctp-devel
 Header files for libsctp library.
 
-%description -n libsctp-devel -l pl
-Pliki nag³ówkowe biblioteki libsctp.
+%description -n libsctp-devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libsctp.
 
 %package -n libsctp-static
 Summary:	Static libsctp library
-Summary(pl):	Statyczna biblioteka libsctp
+Summary(pl.UTF-8):   Statyczna biblioteka libsctp
 Group:		Development/Libraries
 License:	LGPL v2.1+
 Requires:	libsctp-devel = %{version}-%{release}
@@ -57,7 +57,7 @@ Requires:	libsctp-devel = %{version}-%{release}
 %description -n libsctp-static
 Static libsctp library.
 
-%description -n libsctp-static -l pl
+%description -n libsctp-static -l pl.UTF-8
 Statyczna biblioteka libsctp.
 
 %prep
