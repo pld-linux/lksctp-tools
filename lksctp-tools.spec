@@ -1,5 +1,5 @@
 Summary:	User-space access to Linux kernel SCTP
-Summary(pl.UTF-8):   Dostęp do linuksowego SCTP z przestrzeni użytkownika
+Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
 Version:	1.0.6
 Release:	1
@@ -24,7 +24,7 @@ Zawiera narzędzia działające z linii poleceń.
 
 %package -n libsctp
 Summary:	User-space library to access Linux kernel SCTP implementation
-Summary(pl.UTF-8):   Biblioteka pozwalająca na dostęp do linuksowej implementacji SCTP
+Summary(pl.UTF-8):	Biblioteka pozwalająca na dostęp do linuksowej implementacji SCTP
 License:	LGPL v2.1+
 Group:		Libraries
 
@@ -36,7 +36,7 @@ Biblioteka pozwalająca na dostęp do linuksowej implementacji SCTP.
 
 %package -n libsctp-devel
 Summary:	Header files for libsctp library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libsctp
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libsctp
 Group:		Development/Libraries
 License:	LGPL v2.1+
 Requires:	libsctp = %{version}-%{release}
@@ -49,7 +49,7 @@ Pliki nagłówkowe biblioteki libsctp.
 
 %package -n libsctp-static
 Summary:	Static libsctp library
-Summary(pl.UTF-8):   Statyczna biblioteka libsctp
+Summary(pl.UTF-8):	Statyczna biblioteka libsctp
 Group:		Development/Libraries
 License:	LGPL v2.1+
 Requires:	libsctp-devel = %{version}-%{release}
