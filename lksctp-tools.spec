@@ -1,13 +1,12 @@
 Summary:	User-space access to Linux kernel SCTP
 Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
-Version:	1.0.9
+Version:	1.0.11
 Release:	1
 License:	LGPL v2.1+ (library), GPL v2+ (programs)
 Group:		Applications
-Source0:	http://dl.sourceforge.net/lksctp/%{name}-%{version}.tar.gz
-# Source0-md5:	8a6be287980d0035770f00f861b2286a
-Patch0:		%{name}-link.patch
+Source0:	http://downloads.sourceforge.net/lksctp/%{name}-%{version}.tar.gz
+# Source0-md5:	e9cf6c57402c9d4f1173a9529466e16d
 URL:		http://lksctp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -63,7 +62,6 @@ Statyczna biblioteka libsctp.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -80,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.{la,a}
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.{la,a}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -92,6 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/checksctp
 %attr(755,root,root) %{_bindir}/sctp_darn
+%attr(755,root,root) %{_bindir}/sctp_status
 %attr(755,root,root) %{_bindir}/sctp_test
 %attr(755,root,root) %{_bindir}/withsctp
 %dir %{_libdir}/%{name}
