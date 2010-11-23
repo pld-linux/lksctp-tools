@@ -2,7 +2,7 @@ Summary:	User-space access to Linux kernel SCTP
 Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
 Version:	1.0.11
-Release:	1
+Release:	2
 License:	LGPL v2.1+ (library), GPL v2+ (programs)
 Group:		Applications
 Source0:	http://downloads.sourceforge.net/lksctp/%{name}-%{version}.tar.gz
