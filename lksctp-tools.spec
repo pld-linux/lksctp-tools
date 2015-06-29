@@ -1,14 +1,14 @@
 Summary:	User-space access to Linux kernel SCTP
 Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
-Version:	1.0.11
-Release:	3
+Version:	1.0.16
+Release:	1
 License:	LGPL v2.1+ (library), GPL v2+ (programs)
 Group:		Applications
 Source0:	http://downloads.sourceforge.net/lksctp/%{name}-%{version}.tar.gz
-# Source0-md5:	e9cf6c57402c9d4f1173a9529466e16d
+# Source0-md5:	708bb0b5a6806ad6e8d13c55b067518e
 URL:		http://lksctp.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 Requires:	libsctp = %{version}-%{release}
@@ -69,7 +69,8 @@ Statyczna biblioteka libsctp.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
@@ -79,6 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.{la,a}
+
+# withsctp sources???
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/%{name}/*.[ch]
+rmdir $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
