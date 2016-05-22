@@ -1,12 +1,12 @@
 Summary:	User-space access to Linux kernel SCTP
 Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
-Version:	1.0.16
+Version:	1.0.17
 Release:	1
 License:	LGPL v2.1+ (library), GPL v2+ (programs)
 Group:		Applications
 Source0:	http://downloads.sourceforge.net/lksctp/%{name}-%{version}.tar.gz
-# Source0-md5:	708bb0b5a6806ad6e8d13c55b067518e
+# Source0-md5:	68e9b8fa4d4e331029b247b72d46d7a5
 URL:		http://lksctp.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -79,7 +79,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# loadable modules
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/%{name}/*.{la,a}
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libsctp.la
 
 # withsctp sources???
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/%{name}/*.[ch]
@@ -110,8 +113,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -n libsctp-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsctp.so
-%{_libdir}/libsctp.la
 %{_includedir}/netinet/sctp.h
+%{_pkgconfigdir}/libsctp.pc
 %{_mandir}/man3/sctp_*.3*
 %{_mandir}/man7/sctp.7*
 
