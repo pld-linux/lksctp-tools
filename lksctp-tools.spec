@@ -1,13 +1,13 @@
 Summary:	User-space access to Linux kernel SCTP
 Summary(pl.UTF-8):	Dostęp do linuksowego SCTP z przestrzeni użytkownika
 Name:		lksctp-tools
-Version:	1.0.19
+Version:	1.0.21
 Release:	1
 License:	LGPL v2.1+ (library), GPL v2+ (programs)
 Group:		Applications
 #Source0Download: https://github.com/sctp/lksctp-tools/tags
 Source0:	https://github.com/sctp/lksctp-tools/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	0fbb288c9f9625b88d3ab21c9ed9f011
+# Source0-md5:	d0f50c93720d0e73516b30e8ac7d2d9c
 URL:		https://github.com/sctp/lksctp-tools/wiki
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
